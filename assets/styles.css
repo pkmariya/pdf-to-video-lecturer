@@ -1,0 +1,143 @@
+/* Custom styles for PDF to Teaching Video Lecturer */
+
+/* Main container */
+.main {
+    background-color: #f8f9fa;
+}
+
+/* Headers */
+h1, h2, h3 {
+    color: #1e3a8a;
+    font-weight: 600;
+}
+
+/* Buttons */
+.stButton > button {
+    background-color:  #2563eb;
+    color: white;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.stButton > button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* File uploader */
+.uploadedFile {
+    border: 2px dashed #2563eb;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #eff6ff;
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 2rem;
+}
+
+.stTabs [data-baseweb="tab"] {
+    padding: 1rem 2rem;
+    font-weight: 500;
+    color: #64748b;
+}
+
+.stTabs [aria-selected="true"] {
+    color: #2563eb;
+    border-bottom: 3px solid #2563eb;
+}
+
+/* Info boxes */
+.stInfo {
+    background-color: #eff6ff;
+    border-left: 4px solid #2563eb;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+/* Success boxes */
+.stSuccess {
+    background-color: #f0fdf4;
+    border-left: 4px solid #22c55e;
+    padding:  1rem;
+    border-radius: 4px;
+}
+
+/* Error boxes */
+.stError {
+    background-color:  #fef2f2;
+    border-left: 4px solid #ef4444;
+    padding: 1rem;
+    border-radius:  4px;
+}
+
+/* Progress bar */
+.stProgress > div > div {
+    background-color: #2563eb;
+}
+
+/* Chat messages */
+.stChatMessage {
+    border-radius: 8px;
+    padding: 1rem;
+    margin:  0.5rem 0;
+}
+
+.stChatMessage[data-testid="user-message"] {
+    background-color: #eff6ff;
+}
+
+.stChatMessage[data-testid="assistant-message"] {
+    background-color: #f8fafc;
+}
+
+/* Expander */
+.streamlit-expanderHeader {
+    background-color:  #f1f5f9;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* Sidebar */
+.css-1d391kg {
+    background-color:  #f8fafc;
+}
+
+/* Video player */
+video {
+    border-radius: 12px;
+    box-shadow:  0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Text area */
+.stTextArea textarea {
+    border-radius: 8px;
+    border: 2px solid #e2e8f0;
+}
+
+. stTextArea textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Download button */
+.stDownloadButton > button {
+    background-color:  #059669;
+    color: white;
+}
+
+.stDownloadButton > button:hover {
+    background-color: #047857;
+}
+
+/* Divider */
+hr {
+    margin: 2rem 0;
+    border:  none;
+    border-top: 2px solid #e2e8f0;
+}
