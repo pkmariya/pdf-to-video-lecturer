@@ -227,28 +227,73 @@ with tab1:
                 
                 # Generate video
                 if not st.session_state.video_generated:
-                    if st. button("🎬 Generate Video", use_container_width=True, type="primary"):
+                    # if st. button("🎬 Generate Video", use_container_width=True, type="primary"):
+                    #     try:
+                    #         progress_bar = st.progress(0)
+                    #         status_text = st.empty()
+                            
+                    #         status_text.text("🎤 Converting script to speech...")
+                    #         progress_bar.progress(25)
+                            
+                    #         video_gen = VideoGenerator()
+                            
+                    #         status_text.text("🎥 Creating video with visuals...")
+                    #         progress_bar.progress(50)
+                            
+                    #         video_path = video_gen.generate_video(
+                    #             script=st.session_state.script,
+                    #             title=uploaded_file.name. replace('.pdf', ''),
+                    #             style=video_style. lower().replace(' ', '_'),
+                    #             tts_service=tts_service.split()[0]. lower()
+                    #         )
+                            
+                    #         status_text.text("🎨 Adding final touches...")
+                    #         progress_bar.progress(75)
+                            
+                    #         st.session_state.video_path = video_path
+                    #         st.session_state.video_generated = True
+                            
+                    #         progress_bar.progress(100)
+                    #         status_text.text("✅ Video generated successfully!")
+                            
+                    #         time.sleep(1)
+                    #         st.rerun()
+                            
+                    #     except Exception as e: 
+                    #         st.error(f"❌ Error generating video: {str(e)}")
+
+                    # Around line 200 in app.py, find the "Generate Video" button section
+                    # Update the video_gen. generate_video call to include pdf_content: 
+
+                    if st.button("🎬 Generate Video", use_container_width=True, type="primary"):
                         try:
                             progress_bar = st.progress(0)
                             status_text = st.empty()
                             
                             status_text.text("🎤 Converting script to speech...")
-                            progress_bar.progress(25)
+                            progress_bar.progress(20)
                             
                             video_gen = VideoGenerator()
                             
-                            status_text.text("🎥 Creating video with visuals...")
+                            status_text.text("👨‍🏫 Creating virtual lecturer...")
+                            progress_bar.progress(35)
+                            
+                            status_text.text("🎨 Generating educational visuals...")
                             progress_bar.progress(50)
+                            
+                            status_text.text("🎥 Creating video with visuals...")
+                            progress_bar. progress(65)
                             
                             video_path = video_gen.generate_video(
                                 script=st.session_state.script,
                                 title=uploaded_file.name. replace('.pdf', ''),
                                 style=video_style. lower().replace(' ', '_'),
-                                tts_service=tts_service.split()[0]. lower()
+                                tts_service=tts_service. split()[0].lower(),
+                                pdf_content=st.session_state.pdf_content['text']  # ADD THIS LINE
                             )
                             
                             status_text.text("🎨 Adding final touches...")
-                            progress_bar.progress(75)
+                            progress_bar.progress(85)
                             
                             st.session_state.video_path = video_path
                             st.session_state.video_generated = True
@@ -259,7 +304,7 @@ with tab1:
                             time.sleep(1)
                             st.rerun()
                             
-                        except Exception as e: 
+                        except Exception as e:
                             st.error(f"❌ Error generating video: {str(e)}")
     else:
         st.info("👆 Please upload a PDF file from the sidebar to get started")
